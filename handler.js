@@ -1626,7 +1626,7 @@ export async function participantsUpdate({ id, participants, action }) {
   //if (m.conn.isInit) return;
   if (global.db.data == null) await loadDatabase();
   const chat = global.db.data.chats[id] || {};
-  const botTt = global.db.data.settings[m.conn.user.jid] || {};
+  const botTt = global.db.data.settings[m.chat] || {};
   let text = '';
   switch (action) {
     case 'add':
